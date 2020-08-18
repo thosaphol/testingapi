@@ -8,18 +8,18 @@ print()
 import pretext 
 #from premodel import modeltrainning
 from sklearn.externals import joblib
-knn = joblib.load('knn.pkl')
+knn = joblib.load('/home/thanaphat_phetkrow/API/knn.pkl')
 from sklearn.decomposition import PCA
-pca = joblib.load('pca.pkl')
+pca = joblib.load('/home/thanaphat_phetkrow/API/pca.pkl')
 from sklearn.preprocessing import StandardScaler
-scaler = joblib.load('scaler.pkl')
+scaler = joblib.load('/home/thanaphat_phetkrow/API/scaler.pkl')
 
 import tensorflow_hub as hub
 import numpy as np
 import tensorflow_text
 
 pre =pretext.pretextprocessing()
-embed = hub.load("model3")
+embed = hub.load("/home/thanaphat_phetkrow/API/model3")
 
 
 # creating the flask app 

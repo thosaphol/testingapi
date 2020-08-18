@@ -19,7 +19,7 @@ import numpy as np
 import tensorflow_text
 
 pre =pretext.pretextprocessing()
-embed = hub.load("model3")
+#embed = hub.load("model3")
 
 
 # creating the flask app 

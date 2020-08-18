@@ -1,0 +1,4 @@
+model3 เป็นโมเดลที่แปลงจากข้อความเป็นเวกเตอร์ขนาด 512 มิติ เป็นโมเดลที่พัฒนาโดย google
+ซึ่งมีชื่อว่า universal-sentence-encoder-multilingual-large
+สามารถดาวน์โหลดได้ที่ https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3
+เมื่อดาวน์โหลดแล้วให้เปลี่ยนชื่อเป็น model3 เพื่อให้ไฟล์ api.py เรียกใช้งานได้

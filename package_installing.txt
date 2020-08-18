@@ -1,0 +1,28 @@
+OS : Ubuntu 18.04 LTS
+
+python3.6
+sudo apt install python3.6
+sudo apt install python3-pip
+pip3 install -U pip
+
+pythainlp
+pip3 install -U tensorflow
+pip3 install deepcut
+pip3 install pythainlp
+
+firebase admin
+pip3 install firebase-admin
+
+line bot sdk
+pip3 install line-bot-sdk
+
+flask-restful
+pip3 install flask-restful
+
+universal-sentence-encoder
+pip3 install tensorflow_hub>=0.6.0
+pip3 install tensorflow_text>=2.0.0rc0
+
+scikit-learn
+pip3 install joblib==0.14.1
+pip3 install scikti-learn==0.22.1

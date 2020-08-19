@@ -1,24 +1,24 @@
 
 # using flask_
 from flask import Flask, jsonify, request 
-from flask_restful import Resource, Api
+#from flask_restful import Resource, Api
 import os
 
 #from pretextprocessing import pretextprocessing
 import pretext 
 #from premodel import modeltrainning
-from sklearn.externals import joblib
-knn = joblib.load('knn.pkl')
-from sklearn.decomposition import PCA
-pca = joblib.load('pca.pkl')
-from sklearn.preprocessing import StandardScaler
-scaler = joblib.load('scaler.pkl')
+#from sklearn.externals import joblib
+#knn = joblib.load('knn.pkl')
+#from sklearn.decomposition import PCA
+#pca = joblib.load('pca.pkl')
+#from sklearn.preprocessing import StandardScaler
+#scaler = joblib.load('scaler.pkl')
 
-import tensorflow_hub as hub
-import numpy as np
-import tensorflow_text
+#import tensorflow_hub as hub
+#import numpy as np
+#import tensorflow_text
 
-pre =pretext.pretextprocessing()
+#pre =pretext.pretextprocessing()
 #embed = hub.load("model3")
 
 

@@ -14,9 +14,9 @@ pca = joblib.load('pca.pkl')
 from sklearn.preprocessing import StandardScaler
 scaler = joblib.load('scaler.pkl')
 
-#import tensorflow_hub as hub
-#import numpy as np
-#import tensorflow_text
+import tensorflow_hub as hub
+import numpy as np
+import tensorflow_text
 
 pre =pretext.pretextprocessing()
 #embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3")

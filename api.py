@@ -14,9 +14,9 @@ pca = joblib.load('pca.pkl')
 from sklearn.preprocessing import StandardScaler
 scaler = joblib.load('scaler.pkl')
 
-import tensorflow_hub as hub
-import numpy as np
-import tensorflow_text
+#import tensorflow_hub as hub
+#import numpy as np
+#import tensorflow_text
 
 pre =pretext.pretextprocessing()
 #embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3")
@@ -57,17 +57,17 @@ class Classified(Resource):
 #		return jsonify({'data': str(text_vec)})
 
 
-			text_vec = embed(text_list)
-			scaler.fit(text_vec)
-			X_scaled=scaler.transform(text_vec)
-			principalComponents = pca.transform(X_scaled)
+			#text_vec = embed(text_list)
+			#scaler.fit(text_vec)
+			#X_scaled=scaler.transform(text_vec)
+			#principalComponents = pca.transform(X_scaled)
 
-			result=knn.predict(principalComponents)
-			mail_department = {'0':'publicrelations.rmutt@gmail.com',
-							'1':'buildingstation.rmutt@gmail.com',
-							'2':'asset.rmutt@gmail.com',
-							'3':'informationtechnology.rmutt@gmail.com'}
-			text = mail_department[str(result)]
+			#result=knn.predict(principalComponents)
+			#mail_department = {'0':'publicrelations.rmutt@gmail.com',
+			#				'1':'buildingstation.rmutt@gmail.com',
+			#				'2':'asset.rmutt@gmail.com',
+			#				'3':'informationtechnology.rmutt@gmail.com'}
+			#text = mail_department[str(result)]
 			return jsonify({'data': text})
 		except:
 			text ='ไม่สามารถส่งคำร้องได้ เนื่องจากระบบรับคำร้องขัดข้อง กรุณาลองอีกครั้ง'

@@ -7,7 +7,7 @@ import os
 #from pretextprocessing import pretextprocessing
 import pretext 
 #from premodel import modeltrainning
-from sklearn.externals import joblib
+import joblib
 knn = joblib.load('knn.pkl')
 from sklearn.decomposition import PCA
 pca = joblib.load('pca.pkl')
@@ -19,14 +19,14 @@ import numpy as np
 import tensorflow_text
 
 pre =pretext.pretextprocessing()
-#embed = hub.load("model3")
+embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3")
 
 
 # creating the flask app 
 app = Flask(__name__) 
 # creating an API object 
 api = Api(app) 
-app.config['PROPAGATE_EXCEPTIONS'] = True
+#app.config['PROPAGATE_EXCEPTIONS'] = True
 
 # making a class for a particular resource 
 # the get, post methods correspond to get and post requests 

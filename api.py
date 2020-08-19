@@ -3,7 +3,7 @@
 from flask import Flask, jsonify, request 
 from flask_restful import Resource, Api
 import os
-print()
+
 #from pretextprocessing import pretextprocessing
 import pretext 
 #from premodel import modeltrainning
@@ -26,6 +26,7 @@ pre =pretext.pretextprocessing()
 app = Flask(__name__) 
 # creating an API object 
 api = Api(app) 
+app.config['PROPAGATE_EXCEPTIONS'] = True
 
 # making a class for a particular resource 
 # the get, post methods correspond to get and post requests 
@@ -87,6 +88,6 @@ api.add_resource(Classified, '/')
 
 
 if __name__ == '__main__': 
-	app.run() 
+	app.run(debug=True)
 	#app.run(debug = True,host='0.0.0.0',port=5000) 
 	

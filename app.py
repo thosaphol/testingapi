@@ -19,7 +19,7 @@ import numpy as np
 import tensorflow_text
 
 pre =pretext.pretextprocessing()
-embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3")
+#embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-multilingual-large/3")
 
 
 # creating the flask app 

@@ -3,29 +3,30 @@
 from flask import Flask, jsonify, request 
 from flask_restful import Resource, Api
 import os
-print()
+
 #from pretextprocessing import pretextprocessing
 import pretext 
 #from premodel import modeltrainning
 from sklearn.externals import joblib
-knn = joblib.load('/home/thanaphat_phetkrow/API/knn.pkl')
+knn = joblib.load('knn.pkl')
 from sklearn.decomposition import PCA
-pca = joblib.load('/home/thanaphat_phetkrow/API/pca.pkl')
+pca = joblib.load('pca.pkl')
 from sklearn.preprocessing import StandardScaler
-scaler = joblib.load('/home/thanaphat_phetkrow/API/scaler.pkl')
+scaler = joblib.load('scaler.pkl')
 
 import tensorflow_hub as hub
 import numpy as np
 import tensorflow_text
 
 pre =pretext.pretextprocessing()
-embed = hub.load("/home/thanaphat_phetkrow/API/model3")
+#embed = hub.load("model3")
 
 
 # creating the flask app 
 app = Flask(__name__) 
 # creating an API object 
 api = Api(app) 
+app.config['PROPAGATE_EXCEPTIONS'] = True
 
 # making a class for a particular resource 
 # the get, post methods correspond to get and post requests 
@@ -87,6 +88,6 @@ api.add_resource(Classified, '/')
 
 
 if __name__ == '__main__': 
-
-	app.run(debug = True,host='0.0.0.0',port=5000) 
+	app.run(debug=True)
+	#app.run(debug = True,host='0.0.0.0',port=5000) 
 	
